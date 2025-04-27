@@ -18,7 +18,7 @@ VALIDATE $? "Enabling MySQL server"
 
 #mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
 #VALIDATE $? "Setting up root password"
- mysql -h db.hasamahas.online -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
+ mysql -h db.hasamahas.site -uroot -p${mysql_root_password} -e 'show databases;' &>>$LOGFILE
 
  if [ $? -ne 0 ]
 then
